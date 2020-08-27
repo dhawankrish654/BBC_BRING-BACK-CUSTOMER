@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:bottom="0dp"
+        android:top="0dp"
+        android:right="0dp"
+        android:left="0dp"
+        android:drawable="@color/white" />
+
+
+    <item android:drawable="@drawable/logo"
+        android:height="600dp"
+        android:width="600dp"
+        android:gravity="center">
+
+    </item>
+
+
+
+
+
+</layer-list>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/material_emphasis_high_type"
+    android:background="@drawable/lkp"
+    tools:context=".AddUsersActivity"
+    tools:visibility="visible">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="398dp"
+        android:layout_height="51dp"
+        android:background="@color/green"
+        android:drawableLeft="@drawable/person"
+
+        android:hint="Name Of The User"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+
+        android:textColorLink="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phonenum"
+        android:layout_width="411dp"
+        android:layout_height="48dp"
+        android:background="@color/green"
+        android:drawableLeft="@drawable/ic_action_phone"
+        android:hint="Phone Number Of The User"
+        android:inputType="phone"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.spark.submitbutton.SubmitButton
+        android:id="@+id/submitButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="80dp"
+        android:onClick="save"
+        android:text="ADD USER"
+
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dob"
+        app:layout_constraintVertical_bias="0.304"
+        app:sub_btn_background="@color/white"
+        app:sub_btn_duration="3000"
+        app:sub_btn_line_color="@color/green"
+        app:sub_btn_ripple_color="@color/green"
+        app:sub_btn_tick_color="@color/white" />
+
+    <EditText
+        android:id="@+id/dob"
+        android:layout_width="405dp"
+        android:layout_height="46dp"
+        android:background="@color/green"
+        android:drawableLeft="@drawable/date"
+        android:ems="10"
+        android:hint="Enter D.O.B in DD-MM-YYYY Format"
+        android:inputType="date"
+        android:onClick="datepick"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonenum" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

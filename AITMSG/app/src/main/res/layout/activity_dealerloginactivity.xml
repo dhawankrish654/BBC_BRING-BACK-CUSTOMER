@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".dealerloginactivity"
+android:orientation="vertical"
+android:gravity="center"
+android:background="@color/voiler">
+
+
+    <ImageView
+        android:layout_width="179dp"
+        android:layout_height="196dp"
+        android:src="@drawable/bbc">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:drawableLeft="@drawable/ic_action_phone"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"/>
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Shop Name"
+        android:drawableLeft="@drawable/shopname"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"/>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Code"
+    android:id="@+id/code"
+    android:drawableLeft="@drawable/ic_action_name"
+    android:textColor="@color/white"
+    android:textColorHighlight="@color/white"
+    android:textColorHint="@color/white"
+    android:textColorLink="@color/white"
+    />
+
+<Button
+    android:id="@+id/send"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:onClick="sendverificationcode"
+    android:text="Send Verification code"
+    android:background="@color/red"/>
+
+
+</LinearLayout>

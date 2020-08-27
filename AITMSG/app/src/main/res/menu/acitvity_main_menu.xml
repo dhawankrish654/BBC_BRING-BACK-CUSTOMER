@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/yellow">
+
+
+    <item
+        android:id="@+id/yay"
+        android:onClick="yo"
+        android:title="back"
+        android:icon="@drawable/ic_arrow_back_black_24dp"
+
+        app:showAsAction="ifRoom">
+
+    </item>
+
+    <item
+        android:id="@+id/logout"
+        android:onClick="logout"
+        android:title="Logout">
+
+    </item>
+
+    <item
+        android:id="@+id/AddNewMSg"
+        android:onClick="addnewmsg"
+        android:title="ADD NEW MSG">
+
+    </item>
+
+
+
+
+
+
+
+
+
+
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="50dp"
+    android:id="@+id/list_item"
+    android:text="YAY"
+    android:textSize="20dp"
+    android:paddingLeft="10dp"
+    android:drawableLeft="@drawable/btn_background"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/my_selector"
+    android:drawableRight="@drawable/editbtn">
+
+</TextView>
