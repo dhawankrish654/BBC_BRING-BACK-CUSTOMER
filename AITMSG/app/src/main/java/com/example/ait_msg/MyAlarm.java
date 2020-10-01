@@ -4,11 +4,13 @@ import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.IBinder;
 import android.telephony.SmsManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -52,7 +54,7 @@ public class MyAlarm extends BroadcastReceiver  {
         notificationManager.notify(0, buildermotif.build());
 
 
-        if (Integer.valueOf(intent.getStringExtra("hr")) == hrs && Integer.valueOf(intent.getStringExtra("mn")) == Minutes)
+        if (Integer.parseInt(intent.getStringExtra("hr")) == hrs && Integer.parseInt(intent.getStringExtra("mn")) == Minutes)
             sendmsg(intent.getStringExtra("msg"), intent.getStringExtra("gname"), intent.getStringExtra("day"));
 
 
@@ -64,8 +66,10 @@ public class MyAlarm extends BroadcastReceiver  {
         final String crntdate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        assert user != null;
         final DatabaseReference mUserDB = FirebaseDatabase.getInstance().getReference().child("SHOPKEEPER").child(user.getUid()).child("MY GROUPS").child(gname);
         mUserDB.addListenerForSingleValueEvent(new ValueEventListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot dts : dataSnapshot.getChildren()) {
